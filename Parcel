@@ -2,9 +2,28 @@
 у Файлі package.json дописати  --open 
 має бути такий вигляд: "scripts": {
     "start": "parcel src/*.html --open",
+
+// Перед Пушем (встановлння ШЛЯХУ на наш репозиторій)
+у Файлі package.json змінити "homepage": "https://************.github.io/******",  на "homepage": "https://USERname.github.io/reponame",
+також змінити "build": "parcel build src/*.html --public-url /********/" на "build": "parcel build src/*.html --public-url /reponame/"
+
+// Для створення на ГІТІ живої сторінки на вкладці Pages в branch  вибрати gh-pages (після того як запушимо проект)
+    
 // Робоча ПАПКА це - SRC
-// Папка для html частин це - SRC/partials
-//Папка для сss частин це - SRC/sass
-//Папка для свг, картинок  це - SRC/images
-//Додавання html частини в головний HTML:
+
+// Папка для html ЧАСТИН це - SRC/partials
+:::Приклад: SRC/partials/about.html
+//Додавання html ЧАСТИНИ в головний HTML:
 Прописуєм <include src="./partials/НАЗВА_ЧАСТИНИ.html"></include> в ГОЛОВНОМУ (index.html) в тому порядку, в якому та частина буде на нашій сторінці.
+
+//Папка для сss ЧАСТИН це - SRC/sass
+-/Прописувати загальні стилі SASS(css) в:  sass/_common.scss
+-/Прописувати стилі для конкретної ЧАСТИНИ: 
+можна створити в SASS папку components і туди вставити файл зі стилями (обовязково має починатись з нижнього підкресленя)
+:::Приклад SASS/component/_about.scss
+-/Підєднання стилів(окремої ЧАСТИНИ) до нашого проекту:
+Прописуєм в SASS/index.scss @import './Назва папки під стилі/назва файлу ЧАСТИНИ стилів';
+::: Приклад: @import './components/about';
+//Папка для свг, картинок  це - SRC/images
+
+//Щоб подивитись зібраний index.html: папка dist/index.html
