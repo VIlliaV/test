@@ -1,14 +1,14 @@
-Клонування:
+//Клонування:
 git clone https://github.com/USER name/repoNAME.git 
-Клонування з новою назвою:
+//Клонування з новою назвою:
 git clone https://github.com/USER name/repoNAME.git NEWrepoNAME 
-Перейти в папку:
+//Перейти в папку:
 CD NAMEfolders
-Відкрити проект у VSCode:
+//Відкрити проект у VSCode:
 Code .
-Версія Node:
+//Версія Node:
 node -v
-Запуск інсталяції пакетів для Parcel
+//Запуск інсталяції пакетів для Parcel
 npm i
-Запуск режиму розробки:
+//Запуск режиму розробки:
 npm start
