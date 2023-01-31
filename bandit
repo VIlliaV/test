@@ -45,9 +45,9 @@ function onCallPrompt() {
 // }, 3000);
 
 function onStartGame() {
-  onStartRandom(1300, numsEqSimbols1);
-  onStartRandom(2000, numsEqSimbols2);
-  onStartRandom(2700, numsEqSimbols3);
+  onStartRandom(1300, symbolOne);
+  onStartRandom(2000, simbolTwo);
+  onStartRandom(2700, simbolThree);
   on();
   invertCountDown();
   totalResult();
@@ -107,76 +107,77 @@ function disabledBtnStart() {
 //   }, 70);
 // }
 
-function onStartRandom(timeout, numsEqSimbol) {
+function onStartRandom(timeout, symbol) {
   const intId = setInterval(() => {
-    numsEqSimbol();
+    makeSymbol(symbol);
+    // numsEqSimbol();
     setTimeout(() => {
       clearInterval(intId);
     }, timeout);
   }, 70);
 }
 
-function numsEqSimbols1() {
-  makeSymbol(simbolOne);
-  // const random1 = parseInt(Math.random() * 6);
-  // let simbolOne = 0;
-  // if (random1 === 0) {
-  //   simbolOne = '🍔';
-  // } else if (random1 === 1) {
-  //   simbolOne = '🍋';
-  // } else if (random1 === 2) {
-  //   simbolOne = '🍒';
-  // } else if (random1 === 3) {
-  //   simbolOne = '🇺🇦';
-  // } else if (random1 === 4) {
-  //   simbolOne = '🍺';
-  // } else if (random1 === 5) {
-  //   simbolOne = '💰';
-  // }
+// function numsEqSimbols1() {
+//   makeSymbol(simbolOne);
+//   // const random1 = parseInt(Math.random() * 6);
+//   // let simbolOne = 0;
+//   // if (random1 === 0) {
+//   //   simbolOne = '🍔';
+//   // } else if (random1 === 1) {
+//   //   simbolOne = '🍋';
+//   // } else if (random1 === 2) {
+//   //   simbolOne = '🍒';
+//   // } else if (random1 === 3) {
+//   //   simbolOne = '🇺🇦';
+//   // } else if (random1 === 4) {
+//   //   simbolOne = '🍺';
+//   // } else if (random1 === 5) {
+//   //   simbolOne = '💰';
+//   // }
 
-  // refs.leftSimbol.textContent = simbolOne;
-}
+//   // refs.leftSimbol.textContent = simbolOne;
+// }
 
-function numsEqSimbols2() {
-  makeSymbol(simbolTwo);
-  // const random1 = parseInt(Math.random() * 6);
-  // let simbolTwo = 0;
-  // if (random1 === 0) {
-  //   simbolTwo = '🍔';
-  // } else if (random1 === 1) {
-  //   simbolTwo = '🍋';
-  // } else if (random1 === 2) {
-  //   simbolTwo = '🍒';
-  // } else if (random1 === 3) {
-  //   simbolTwo = '🇺🇦';
-  // } else if (random1 === 4) {
-  //   simbolTwo = '🍺';
-  // } else if (random1 === 5) {
-  //   simbolTwo = '💰';
-  // }
+// function numsEqSimbols2() {
+//   makeSymbol(simbolTwo);
+//   // const random1 = parseInt(Math.random() * 6);
+//   // let simbolTwo = 0;
+//   // if (random1 === 0) {
+//   //   simbolTwo = '🍔';
+//   // } else if (random1 === 1) {
+//   //   simbolTwo = '🍋';
+//   // } else if (random1 === 2) {
+//   //   simbolTwo = '🍒';
+//   // } else if (random1 === 3) {
+//   //   simbolTwo = '🇺🇦';
+//   // } else if (random1 === 4) {
+//   //   simbolTwo = '🍺';
+//   // } else if (random1 === 5) {
+//   //   simbolTwo = '💰';
+//   // }
 
-  // refs.centerSimbol.textContent = simbolTwo;
-}
-function numsEqSimbols3() {
-  makeSymbol(simbolThree);
-  // const random1 = parseInt(Math.random() * 6);
-  // let simbolThree = 0;
-  // if (random1 === 0) {
-  //   simbolThree = '🍔';
-  // } else if (random1 === 1) {
-  //   simbolThree = '🍋';
-  // } else if (random1 === 2) {
-  //   simbolThree = '🍒';
-  // } else if (random1 === 3) {
-  //   simbolThree = '🇺🇦';
-  // } else if (random1 === 4) {
-  //   simbolThree = '🍺';
-  // } else if (random1 === 5) {
-  //   simbolThree = '💰';
-  // }
+//   // refs.centerSimbol.textContent = simbolTwo;
+// }
+// function numsEqSimbols3() {
+//   makeSymbol(simbolThree);
+//   // const random1 = parseInt(Math.random() * 6);
+//   // let simbolThree = 0;
+//   // if (random1 === 0) {
+//   //   simbolThree = '🍔';
+//   // } else if (random1 === 1) {
+//   //   simbolThree = '🍋';
+//   // } else if (random1 === 2) {
+//   //   simbolThree = '🍒';
+//   // } else if (random1 === 3) {
+//   //   simbolThree = '🇺🇦';
+//   // } else if (random1 === 4) {
+//   //   simbolThree = '🍺';
+//   // } else if (random1 === 5) {
+//   //   simbolThree = '💰';
+//   // }
 
-  // refs.rightSimbol.textContent = simbolThree;
-}
+//   // refs.rightSimbol.textContent = simbolThree;
+// }
 
 function on() {
   let score = 0;
