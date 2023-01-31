@@ -45,9 +45,9 @@ function onCallPrompt() {
 // }, 3000);
 
 function onStartGame() {
-  onStartRandom(1300, symbolOne);
-  onStartRandom(2000, simbolTwo);
-  onStartRandom(2700, simbolThree);
+  onStartRandom(1300, 'leftSimbol');
+  onStartRandom(2000, 'centerSimbol');
+  onStartRandom(2700, 'rightSimbol');
   on();
   invertCountDown();
   totalResult();
@@ -109,6 +109,7 @@ function disabledBtnStart() {
 
 function onStartRandom(timeout, symbol) {
   const intId = setInterval(() => {
+    // console.log(symbol);
     makeSymbol(symbol);
     // numsEqSimbol();
     setTimeout(() => {
@@ -291,9 +292,9 @@ function on() {
   }, 3000);
 }
 
-function makeSymbol(simbol) {
+function makeSymbol(simbolPlace) {
   const random = parseInt(Math.random() * 6);
-  let simbol = 0;
+
   if (random === 0) {
     simbol = '🍔';
   } else if (random === 1) {
@@ -308,5 +309,5 @@ function makeSymbol(simbol) {
     simbol = '💰';
   }
 
-  refs.rightSimbol.textContent = simbol;
+  refs[simbolPlace].textContent = simbol;
 }
